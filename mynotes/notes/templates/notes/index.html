@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мои конспекты</title>
+  <link rel="stylesheet" href="{% static 'notes/css/style.css' %}">
+  <script src="{% static 'notes/js/script.css' %}" defer></script>
+</head>
+<body>
+  <header class="topbar" id="top">
+    <div class="toprow" style="display:flex; align-items:center; gap:16px; flex: 0 0 auto;">
+      <div class="brand">
+        <div class="logo">K</div>
+        <div>
+          <div>Мои конспекты</div>
+          <small>Лаконичные заметки и материалы</small>
+        </div>
+      </div>
+      <!-- mobile-menu -->
+    </div>
+
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Поиск по конспектам..." autocomplete="off" />
+      <div id="searchDropdown" class="search-dropdown" aria-live="polite"></div>
+    </div>
+
+    <nav class="nav">
+      <a href="#">Главная</a>
+      <a href="#">Конспекты</a>
+      <a href="#">Категории</a>
+      <a href="#">О сайте</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar border_radius_left">
+      <h2>Разделы</h2>
+      <ul class="menu" id="sidebarMenu">  
+        <li><a class="active" href="#">Главная</a></li>
+        <li><a href="#">Математика</a></li>
+        <li><a href="#">Программирование</a></li>
+        <li><a href="#">История</a></li>
+        <li><a href="#">Физика</a></li>
+        <li><a href="#">Английский</a></li>
+      </ul>
+
+      <h2>Популярное</h2>
+      <ul class="menu">
+        <li>
+          <a href="#">Алгебра</a>
+          <ul class="submenu">
+            <li><a href="#">Формулы</a></li>
+            <li><a href="#">Уравнения</a></li>
+            <li><a href="#">Неравенства</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Информатика</a>
+          <ul class="submenu">
+            <li><a href="#">HTML и CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+            <li><a href="#">Git</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <div class="hero">
+        <div class="tag">Серо‑зелёный минимализм</div>
+        <h1>Сайт для моих конспектов</h1>
+        <p>
+          Удобная структура для заметок, лекций и шпаргалок. Спокойный дизайн без лишних
+          деталей, чтобы ничего не отвлекало от содержания.
+        </p>
+      </div>
+
+      <div class="grid">
+        <div class="card searchable" data-title="Последние записи" data-search="последние записи новые конспекты темы анонсы">
+          <h3 class="highlightable">Последние записи</h3>
+          <p class="highlightable">
+            Здесь можно показывать свежие конспекты, новые темы и короткие анонсы.
+          </p>
+        </div>
+
+        <div class="card searchable" data-title="Быстрый доступ" data-search="быстрый доступ важные разделы избранное частые темы">
+          <h3 class="highlightable">Быстрый доступ</h3>
+          <p class="highlightable">
+            В этом блоке удобно разместить важные разделы, избранные материалы и частые темы.
+          </p>
+        </div>
+      </div>
+
+      <div class="section searchable" id="about" data-title="О сайте" data-search="о сайте библиотека конспектов боковое меню карточки чистая область">
+        <h2 class="highlightable">О сайте</h2>
+        <p class="highlightable">
+          Это личная библиотека конспектов с боковым меню, короткими карточками и чистой
+          центральной областью. Такой стиль хорошо подходит для учебных заметок и
+          аккуратной навигации.
+        </p>
+        <p class="highlightable">Если хочешь, я могу ещё сделать:</p>
+        <div class="note highlightable">
+          • ещё более “премиальный” вариант<br />
+          • тёмную версию этой же страницы<br />
+          • версию с поиском по конспектам<br />
+          • адаптацию под конкретные разделы и предметы
+        </div>
+      </div>
+
+      <div class="footer">
+        © 2026 Мои конспекты
+      </div>
+    </section>
+
+    <aside class="toc">
+      <h2>На этой странице</h2>
+      <ol>
+        <li><a href="#top">Введение</a></li>
+        <li><a href="#about">О сайте</a></li>
+        <li><a href="#">Последние записи</a></li>
+        <li><a href="#">Избранное</a></li>
+      </ol>
+    </aside>
+  </main>
+</body>
+</html>
